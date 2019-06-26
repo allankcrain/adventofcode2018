@@ -37,7 +37,11 @@ class FileUpload extends React.Component {
    * @param {object} e - FileReader file event
    */
   chewInput(e) {
-    this.props.onUpload(e.target.result.split("\n"));
+    this.props.onUpload(e.target.result
+      .split("\n")                    // Split on linebreaks
+      .map( line => line.trim() )     // Remove whitespace at input edges
+      .filter( line => line !== '' )  // Delete blank lines
+    );
   }
 
   /**
