@@ -56,6 +56,7 @@ class Calibration extends React.Component {
   render() {
     return (
       <div>
+        <h2>Day 1: Chronal Calibration</h2>
         <FileUpload onUpload={ (data) => this.processFile(data) } /> <br />
         { this.state.frequency && `Frequency: ${this.state.frequency}` } <br />
         { this.state.doubleFreq && `First doubled frequency: ${this.state.doubleFreq}` }

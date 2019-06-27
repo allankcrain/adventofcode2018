@@ -62,7 +62,7 @@ class InventoryManagementSystem extends React.Component {
             errors++;
           }
         }
-        
+
         // If there were too many error characters, throw it away.
         if (errors !== 1) {
           commonLetters = '';
@@ -89,6 +89,7 @@ class InventoryManagementSystem extends React.Component {
   render() {
     return (
       <div>
+        <h2>Day 2: Inventory Management System</h2>
         <FileUpload onUpload={(data) => this.processFile(data)} /><br/>
         {this.state.checksum!==null && `Checksum: ${this.state.checksum}`}<br/>
         {this.state.commonLetters !== '' && `Common letters: ${this.state.commonLetters}`}
